@@ -3,6 +3,7 @@
   var firebaseConfig = {
     apiKey: "AIzaSyDprUGi52hEhQEJvYreF4CSL5L-hzOLZ0w",
     authDomain: "e-ducate-me-4b9c9.firebaseapp.com",
+    databaseURL: "https://e-ducate-me-4b9c9-default-rtdb.asia-southeast1.firebasedatabase.app/",
     projectId: "e-ducate-me-4b9c9",
     storageBucket: "e-ducate-me-4b9c9.appspot.com",
     messagingSenderId: "470148779696",
