@@ -1,0 +1,196 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  
+
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    
+}
+ 
+nav{
+    background: white;
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}
+nav img{
+    width: 200px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: rgb(22, 14, 77);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FAE0D8;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav .fas{
+    display: none;
+}
+nav .far{
+    display: none;
+}
+
+
+
+@media(max-width: 700px){
+    nav{       
+        padding: 4%;
+    }
+    nav img{
+        width: 200px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #bed1d8;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .far{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    nav .fas{
+        display: block;
+        color: #3B3086;
+        margin: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+.split {
+    display: flex;
+    height: 100%;
+    position: relative;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+.split div {
+    flex-basis: 40%;
+}
+  
+input[type=email], input[type=password], input[type=name], input[type=desc], input[type=PhoneNo] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.grade,.subject, .Edu{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+  
+button {
+    background-color: #3B3086;
+    font-style: bold;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+}
+.tutor,.parent{
+    background-color: #3B3086;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin: 8px 0;
+    text-align: center;
+    display: block;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+  
+    padding: 60px 40px;
+    background-color:whitesmoke;
+    
+}
+  
+.formContainer {
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 60px 40px;
+    background-color:whitesmoke;
+}
+.password{
+    font-size: 14px;
+} 
+
+span.password {
+    float: right;
+    padding-top: 16px;
+}
+h2,p{
+    
+      text-align: center;
+}
+@media(max-width: 700px){
+    .split{
+        flex-direction: column;
+    }
+    .split div{
+        margin: 10px;
+    }
+}
+
+  

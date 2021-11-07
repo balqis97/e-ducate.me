@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>E-ducate.Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/form.css'>
+    <script src="https://kit.fontawesome.com/1036134b61.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script  src="form.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="homepage.html"><img src="images/Full Logo2.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="far fa-times-circle" onclick="closeMenu()"></i>
+            <ul>
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="#">OUR TUTOR</a></li>
+                <li><a href="Signup.html">REGISTER/SIGNUP</a></li>
+                <li><a href="index.html">LOGIN</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="openMenu()"></i>
+    </nav>
+
+    <div class="split"> 
+        <div class="formContainer">
+            <h2>Create an account</h2> <br>
+                <label for="f_name"><b>Name</b></label>
+                <input type="name" placeholder="Name here" id="f_name"><br>
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" id="email" placeholder="Email">
+                        <label for="psw"><b>Password</b></label>    
+                        <input type="password" id="password" placeholder=" Password">
+                        <label for="Subject"><b>Subject</b></label> <br>
+                            <select class="subject" id="subj" >
+                                <option value="Select subject"> Select Subject </option>
+                                <option value="Mathematic">Mathematic</option>
+                                <option value="English">English</option>
+                            </select> <br>
+                            <label for="Tgrade"><b>Teaching Grade</b></label> <br>
+                                <select class="grade" id="grade">
+                                    <option value="Select Grade"> Select Grade </option>
+                                    <option value="Form 4">Form 4</option>
+                                    <option value="Form 5">Form 5</option>
+                                </select> <br>
+                                <label for="EduBack"><b>Education Background</b></label> <br>
+                                    <select class="Edu" id="edu" >
+                                        <option value="Select Grade"> Background Education </option>
+                                        <option value="spm">SPM</option>
+                                        <option value="stpm/matric">STPM/Matriculation</option>
+                                        <option value="degree">Degree</option>
+                                        <option value="master">Master</option>
+                                        <option value="phd">PHD</option>
+                                    </select> <br>
+                                     <label for="PhoneNo"><b>Phone Number</b></label>
+                                     <input type="PhoneNo" placeholder="Phone Number here" id="PhoneNo"><br>
+                                        <label for="Resume"><b>Upload Resume or CV</b></label> <br>
+                                        <input type="file" id="file">
+                                    <button onclick="register()" href="index.html" >Register</button>
+                                    <h6>Already have an account? <a href="index.html">Login</a> here</h6>
+                        
+        </div>
+    </div>  
+
+
+    
+</body>b 
+</html>
+<script>
+
+    var navLinks= document.getElementById("navLinks");
+    function openMenu(){
+        navLinks.style.right="0";
+    }
+    function closeMenu(){
+        navLinks.style.right="-200px";
+    }
+    
+  
+  </script>
