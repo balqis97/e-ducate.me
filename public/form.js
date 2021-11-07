@@ -1,13 +1,13 @@
 
   // web app's Firebase configuration
   var firebaseConfig = {
-  apiKey: "AIzaSyDprUGi52hEhQEJvYreF4CSL5L-hzOLZ0w",
-  authDomain: "e-ducate-me-4b9c9.firebaseapp.com",
-  projectId: "e-ducate-me-4b9c9",
-  storageBucket: "e-ducate-me-4b9c9.appspot.com",
-  messagingSenderId: "470148779696",
-  appId: "1:470148779696:web:9a6852b1df26b858d8b575",
-  measurementId: "G-SNZ6VHYB74"
+    apiKey: "AIzaSyDprUGi52hEhQEJvYreF4CSL5L-hzOLZ0w",
+    authDomain: "e-ducate-me-4b9c9.firebaseapp.com",
+    projectId: "e-ducate-me-4b9c9",
+    storageBucket: "e-ducate-me-4b9c9.appspot.com",
+    messagingSenderId: "470148779696",
+    appId: "1:470148779696:web:9a6852b1df26b858d8b575",
+    measurementId: "G-SNZ6VHYB74"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
