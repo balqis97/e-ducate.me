@@ -64,8 +64,8 @@
       alert('User Created!! Welcome '+ f_name)
 
       const file = document.getElementById("file").files[0]
-      const storageRef = firebase.storage().ref()
-      const final = storageRef.child('resume/'+ user.uid)
+      const storageRef = firebase.storage().ref("tutors")
+      const final = storageRef.child( user.uid + '/resume.pdf')
       const task = final.put(file)
   
       task.on('state_changed', 
