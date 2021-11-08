@@ -16,7 +16,7 @@
   const auth =  firebase.auth()
   const database = firebase.database()
 
-  //register button fuction
+ 
   function register () {
     f_name = document.getElementById("f_name").value
     email = document.getElementById("email").value
@@ -25,8 +25,9 @@
     grade = document.getElementById("grade").value
     edu = document.getElementById("edu").value
     PhoneNo = document.getElementById("PhoneNo").value
-    
-    
+   
+
+
      // Validate input fields
     if (validate_email(email) == false || validate_password(password) == false) {
       alert('Email or Password is Outta Line!!')
@@ -38,14 +39,12 @@
       return
     }
 
-
     auth.createUserWithEmailAndPassword(email,password)
     .then(function(){
 
       var user = auth.currentUser
 
       var database_ref = database.ref()
-     
 
       var user_data ={
         f_name : f_name,
@@ -59,22 +58,22 @@
       }
 
       database_ref.child('tutors/' + user.uid).set(user_data)
-    
 
       alert('User Created!! Welcome '+ f_name)
 
     })
     .catch(function(error) {
-      // Firebase will use this to alert of its errors //`resume/${file}`
+      // Firebase will use this to alert of its errors
       var error_code = error.code
       var error_message = error.message
   
       alert(error_message)
     })
 
+
     const file = document.getElementById("file").files[0]
     const storageRef = firebase.storage().ref()
-    const final = storageRef.child('resume/'+ auth.user.id)
+    const final = storageRef.child(`resume/${file}`)
     const task = final.put(file)
 
     task.on('state_changed', 
@@ -87,7 +86,6 @@
             
           )
   }
-
 
   function login(){
     email = document.getElementById('email').value
