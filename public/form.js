@@ -63,7 +63,21 @@
 
       alert('User Created!! Welcome '+ f_name)
 
-
+      const file = document.getElementById("file").files[0]
+      const storageRef = firebase.storage().ref()
+      const final = storageRef.child('resume/'+ auth.user.uid)
+      const task = final.put(file)
+  
+      task.on('state_changed', 
+              function progress(progress){
+                console.log(progress.bytesTransferred / progress.totalBytes *100)
+              },
+              function error(err){
+                console.log('There was An Err ' + err)
+              }
+              
+            )
+            
     })
     .catch(function(error) {
       // Firebase will use this to alert of its errors //`resume/${file}`
@@ -73,20 +87,7 @@
       alert(error_message)
     })
 
-    const file = document.getElementById("file").files[0]
-    const storageRef = firebase.storage().ref()
-    const final = storageRef.child('resume/'+ auth.user.uid)
-    const task = final.put(file)
-
-    task.on('state_changed', 
-            function progress(progress){
-              console.log(progress.bytesTransferred / progress.totalBytes *100)
-            },
-            function error(err){
-              console.log('There was An Err ' + err)
-            }
-            
-          )
+    
 
     
   }
