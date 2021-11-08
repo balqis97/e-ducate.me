@@ -25,6 +25,7 @@
     grade = document.getElementById("grade").value
     edu = document.getElementById("edu").value
     PhoneNo = document.getElementById("PhoneNo").value
+    fileUploader = document.getElementById('fileUploader')
     
     
      // Validate input fields
@@ -65,16 +66,16 @@
 
     })
     .catch(function(error) {
-      // Firebase will use this to alert of its errors
+      // Firebase will use this to alert of its errors //`resume/${file}`
       var error_code = error.code
       var error_message = error.message
   
       alert(error_message)
     })
 
-    const file = document.getElementById("file").files[0]
-    const storageRef = firebase.storage().ref()
-    const final = storageRef.child(`resume/${file}`)
+    const file = document.getElementById("fileUploader").files[0]
+    const storageRef = firebase.storage().ref("tutors")
+    const final = storageRef.child(user.uid + "/resume.pdf")
     const task = final.put(file)
 
     task.on('state_changed', 
