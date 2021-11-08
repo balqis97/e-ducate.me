@@ -63,9 +63,19 @@
 
       alert('User Created!! Welcome '+ f_name)
 
-      const file = document.getElementById("file").files[0]
+
+    })
+    .catch(function(error) {
+      // Firebase will use this to alert of its errors //`resume/${file}`
+      var error_code = error.code
+      var error_message = error.message
+  
+      alert(error_message)
+    })
+
+    const file = document.getElementById("file").files[0]
     const storageRef = firebase.storage().ref()
-    const final = storageRef.child('resume/'+ user.uid)
+    const final = storageRef.child('resume/'+ auth.user.uid)
     const task = final.put(file)
 
     task.on('state_changed', 
@@ -77,15 +87,6 @@
             }
             
           )
-
-    })
-    .catch(function(error) {
-      // Firebase will use this to alert of its errors //`resume/${file}`
-      var error_code = error.code
-      var error_message = error.message
-  
-      alert(error_message)
-    })
 
     
   }
