@@ -25,7 +25,7 @@
     grade = document.getElementById("grade").value
     edu = document.getElementById("edu").value
     PhoneNo = document.getElementById("PhoneNo").value
-    fileUploader = document.getElementById('fileUploader')
+    file = document.getElementById('file').value
     
     
      // Validate input fields
@@ -73,9 +73,9 @@
       alert(error_message)
     })
 
-    const file = document.getElementById("fileUploader").files[0]
+    const file = document.getElementById("file").files[0]
     const storageRef = firebase.storage().ref("tutors")
-    const final = storageRef.child(user.uid + "/resume.pdf")
+    const final = storageRef.child(auth.user.uid + "/resume.pdf")
     const task = final.put(file)
 
     task.on('state_changed', 
