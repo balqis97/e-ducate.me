@@ -65,7 +65,7 @@
 
       const file = document.getElementById("file").files[0]
     const storageRef = firebase.storage().ref()
-    const final = storageRef.child('resume/'+ auth.user.id)
+    const final = storageRef.child('resume/'+ user.uid)
     const task = final.put(file)
 
     task.on('state_changed', 
