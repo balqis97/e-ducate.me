@@ -25,7 +25,6 @@
     grade = document.getElementById("grade").value
     edu = document.getElementById("edu").value
     PhoneNo = document.getElementById("PhoneNo").value
-    file = document.getElementById('file').value
     
     
      // Validate input fields
