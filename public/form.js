@@ -63,10 +63,10 @@
 
       alert('User Created!! Welcome '+ f_name)
 
-      const file = document.getElementById("file").files[0]
-      const storageRef = firebase.storage().ref('tutors')
-      const final = storageRef.child('resume/'+ user.uid)
-      const task = final.put(file)
+      var file = document.getElementById("file").files[0]
+      var storageRef = firebase.storage().ref()
+      var final = storageRef.child('resume/'+ user.uid)
+      var task = final.put(file)
   
       task.on('state_changed', 
               function progress(progress){
