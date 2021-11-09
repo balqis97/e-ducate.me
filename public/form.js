@@ -46,7 +46,6 @@
 
       var database_ref = database.ref()
      
-
       var user_data ={
         f_name : f_name,
         email : email,
@@ -63,6 +62,7 @@
 
       alert('User Created!! Welcome '+ f_name)
 
+      //file upload function with auth
       var file = document.getElementById("file").files[0]
       var storageRef = firebase.storage().ref()
       var final = storageRef.child('resume/'+ user.uid)
@@ -86,9 +86,6 @@
   
       alert(error_message)
     })
-
-    
-
     
   }
 
