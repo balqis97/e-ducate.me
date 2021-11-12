@@ -130,6 +130,8 @@
 
     alert(error_message)
   })
+
+  window.location.href = 'Profile.html';
   }
 
 
