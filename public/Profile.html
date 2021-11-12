@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>E-ducate.Me</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1036134b61.js" crossorigin="anonymous"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script  src="form.js"></script>
+</head>
+<body>
+    <section>
+        <nav>
+            <a href="homepage.html"><img src="images/Full Logo2.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="far fa-times-circle" onclick="closeMenu()"></i>
+                <ul>
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="#">OUR TUTOR</a></li>
+                <li><a href="Signup.html">REGISTER/SIGNUP</a></li>
+                <li><a href="#">LOGOUT</a></li>
+            </div>
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+        </nav>
+    </section>
+    <section class="My-profile">
+        <div class="first-row-details">
+            <div class="left-col">
+               
+                <div class="profile-pic-div">
+                    <img src="images/image.jpg" id="photo">
+                    <input type="file" id="file">
+                    <label for="file" id="uploadBtn">Choose Photo</label>
+                </div>
+                <label for="file" id="uploadBtn">Choose Photo</label>
+
+                </div>
+                <div class="personal-info">
+                    <div class="tutor-col">
+                        <h2>My Profile</h2><br>
+                        <p>Name:</p>
+                        <p>Email:</p>
+                        <p>Phone No:</p>
+                        <p>Subject Teaching:</p>
+                        <p>Teaching Grade: </p>
+                        <p>Education Background: </p>
+                    </div>
+                    
+                </div>
+            </div>  
+            <div class="right-col">
+                <h2>Calendar</h2>
+                <div class="calendar">
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="curr-date">
+                            <h1>June</h1>
+                            <p>Fri June 18, 2021</p>
+                        </div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days">
+                        <div class="prev-date">30</div>
+                        <div class="prev-date">31</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div class="today">18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div>29</div>
+                        <div>30</div>
+                        <div class="next-date">1</div>
+                        <div class="next-date">2</div>
+                        <div class="next-date">3</div>
+                        <div class="next-date">4</div>
+                        <div class="next-date">5</div>
+                        <div class="next-date">6</div>
+                        <div class="next-date">7</div>
+                        <div class="next-date">8</div>
+                        <div class="next-date">9</div>
+                        <div class="next-date">10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-row-class">
+            <h1>Class Schedule</h1>
+            <div class="class-created">
+                <div class="class-details">
+                    <h3>Science</h3>
+                    <p>Mon & Wed, 8am - 10am</p>
+                    <p>Muhammad Shafiq</p>
+                </div>
+                <div class="hyperlink-pages">
+                    <a href="payment.html">Pay Fee</a><br>
+                    <a href="TMParents.html">View Teaching Materials</a><br>
+                    <button onclick="popupstudentprofile()">Rate and Feedback</button><br>
+                    <button onclick="popupRemoveClass()">Remove Class</button><br>
+                </div>
+            </div>
+            <div class="class-created">
+                <div class="class-details">
+                    <h3>Mathematics</h3>
+                    <p>Mon & Wed, 8pm - 10pm</p>
+                    <p>Mr.Hisyam</p>
+                </div>
+                <div class="hyperlink-pages">
+                    <a href="payment.html">Pay Fee</a><br>
+                    <a href="TMParents.html">View Teaching Materials</a><br>
+                    <button onclick="popupstudentprofile()">Rate and Feedback</button><br>
+                    <button onclick="popupRemoveClass()">Remove Class</button><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        var navLinks= document.getElementById("navLinks");
+        function openMenu(){
+            navLinks.style.right="0";
+        }
+        function closeMenu(){
+            navLinks.style.right="-200px";
+        }
+
+    </script>    
+</body>
+</html>

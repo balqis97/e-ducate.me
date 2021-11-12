@@ -62,7 +62,7 @@
 
       alert('User Created!! Welcome '+ f_name)
 
-      //file upload function with auth
+      //file resume upload function with auth
       var file = document.getElementById("file").files[0]
       var storageRef = firebase.storage().ref()
       var final = storageRef.child('resume/'+ user.uid)
@@ -77,6 +77,22 @@
               }
               
             )
+              
+            //file resume upload function with auth
+      // var file = document.getElementById("img").files[0]
+      // var storageRef = firebase.storage().ref()
+      // var final = storageRef.child('image/'+ user.uid)
+      // var task = final.put(file)
+  
+      // task.on('state_changed', 
+      //         function progress(progress){
+      //           console.log(progress.bytesTransferred / progress.totalBytes *100)
+      //         },
+      //         function error(err){
+      //           console.log('There was An Err ' + err)
+      //         }
+              
+      //       )
 
     })
     .catch(function(error) {
@@ -148,4 +164,7 @@ function validate_field(field) {
     return true
   }
 }
+
+//declearing html elements
+
 
