@@ -209,7 +209,9 @@ h2,p{
     height: 50%;
     width: 50%;
 }
-
+#img{
+    display: none;
+}
 
 #uploadBtn{
     height: 40px;
