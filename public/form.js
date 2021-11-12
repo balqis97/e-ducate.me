@@ -131,7 +131,7 @@
     alert(error_message)
   })
 
-  window.location.href = 'Profile.html';
+  window.location.href = "Profile.html";
   }
 
 
