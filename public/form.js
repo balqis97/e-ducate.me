@@ -64,8 +64,8 @@
 
       //file resume upload function with auth
       var file = document.getElementById("file").files[0]
-      var storageRef = firebase.storage().ref()
-      var final = storageRef.child('resume/'+ user.uid)
+      var storageRef = firebase.storage().ref(tutors)
+      var final = storageRef.child('tutors/'+'resume/'+ user.uid)
       var task = final.put(file)
   
       task.on('state_changed', 
@@ -79,20 +79,20 @@
             )
               
             //file resume upload function with auth
-      var file = document.getElementById("img").files[0]
-      var storageRef = firebase.storage().ref()
-      var final = storageRef.child('image/'+ user.uid)
-      var task = final.put(file)
+      // var file = document.getElementById("img").files[0]
+      // var storageRef = firebase.storage().ref()
+      // var final = storageRef.child('image/'+ user.uid)
+      // var task = final.put(file)
   
-      task.on('state_changed', 
-              function progress(progress){
-                console.log(progress.bytesTransferred / progress.totalBytes *100)
-              },
-              function error(err){
-                console.log('There was An Err ' + err)
-              }
+      // task.on('state_changed', 
+      //         function progress(progress){
+      //           console.log(progress.bytesTransferred / progress.totalBytes *100)
+      //         },
+      //         function error(err){
+      //           console.log('There was An Err ' + err)
+      //         }
               
-            )
+      //       )
 
     })
     .catch(function(error) {
