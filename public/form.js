@@ -96,7 +96,7 @@
 
     })
 
-    window.location.href = "Profile.html"
+    
 
     .catch(function(error) {
       // Firebase will use this to alert of its errors //`resume/${file}`
