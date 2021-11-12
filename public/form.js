@@ -59,8 +59,8 @@
 
       database_ref.child('tutors/' + user.uid).set(user_data)
     
-
-      alert('User Created!! Welcome '+ f_name)
+      alert('Welcome to E-ducate.me' + f_name)
+     
 
       //file resume upload function with auth
       var file = document.getElementById("file").files[0]
@@ -103,7 +103,7 @@
       alert(error_message)
     })
     
-    window.location.href = "Login.html";
+    
   }
 
 
